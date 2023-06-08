@@ -36,27 +36,29 @@ function generatePassword($password_lenght){
 </head>
 <body>
     <div class="bg-my-blue">
-    <div class="container">
-        <h1> Strong Password Generator</h1>
-        <h2>Genera una password sicura</h2>
-               
-     
-        <form class="form">
-        <?php 
-                $randomPassword = generatePassword($password_lenght); 
-                echo $randomPassword; ?>
+          <div class="container">
+                      <h1> Strong Password Generator</h1>
+                      <h2>Genera una password sicura</h2>
 
-			<div class="mb-3 d-flex justify-items-center align-items-center ">
-			  <label for="password" class="form-label w-50">Lunghezza password: </label>
-			  <input type="text" class="form-control w-50" id="password" name="password">
-			</div>
-            <div class="w-100">
-            <button type="submit" class="btn btn-primary">Invia</button>
-			<a href="/php-strong-password-generator" class="btn btn-secondary">Annulla</a>
-            </div>
-			
-		</form>
-    </div>
+
+                      <div class="alert alert-info" role="alert">
+                        PASSWORD:<?php 
+                              $randomPassword = generatePassword($password_lenght); 
+                              echo $randomPassword; ?>
+                      </div>    
+                  
+                      <form class="form">
+                        <div class="mb-3 d-flex justify-items-center align-items-center ">
+                          <label for="password" class="form-label w-50">Lunghezza password: </label>
+                          <input type="text" class="form-control w-50" id="password" name="password">
+                        </div>
+                        <div class="w-100">
+                            <button type="submit" class="btn btn-primary">Invia</button>
+                            <a href="/php-strong-password-generator" class="btn btn-secondary">Annulla</a>
+                        </div>
+                    
+                      </form>
+           </div>
     </div>
    
 </body>
