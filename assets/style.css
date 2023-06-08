@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.bg-my-blue {
+  background-color: #001632;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+  padding-top: 4rem;
+}
+.container h1 {
+  color: #848e9a;
+}
+
+.container h2 {
+  color: white;
+}
+
+.form {
+  width: 70%;
+  margin: auto;
+  background-color: white;
+  padding: 1rem;
+  padding-bottom: 2rem;
+  border-radius: 0.5rem;
+}
