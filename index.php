@@ -1,3 +1,28 @@
+<?php
+var_dump($_GET);
+$password_lenght = $_GET['password'] ?? false;
+
+
+function generatePassword($password_lenght){
+    $characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.!*+-';
+    $password ='';
+
+    $characterCount = strlen($characters);
+    for ($i = 0; $i <$password_lenght; $i++) {
+      $index = rand(0, $characterCount - 1);
+      $password .= $characters[$index];
+    }
+  
+    return $password;
+}
+
+              
+            
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,8 +39,13 @@
     <div class="container">
         <h1> Strong Password Generator</h1>
         <h2>Genera una password sicura</h2>
-
+               
+     
         <form class="form">
+        <?php 
+                $randomPassword = generatePassword($password_lenght); 
+                echo $randomPassword; ?>
+
 			<div class="mb-3 d-flex justify-items-center align-items-center ">
 			  <label for="password" class="form-label w-50">Lunghezza password: </label>
 			  <input type="text" class="form-control w-50" id="password" name="password">
@@ -25,7 +55,6 @@
 			<a href="/php-strong-password-generator" class="btn btn-secondary">Annulla</a>
             </div>
 			
-
 		</form>
     </div>
     </div>
